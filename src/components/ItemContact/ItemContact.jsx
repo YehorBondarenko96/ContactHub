@@ -7,7 +7,7 @@ import { useEffect, useState, useRef } from 'react';
 import { ChangingCWindow } from '../ChangingCWindow/ChangingCWindow';
 import { setScrollLeftLists } from '../../redux/contactsSlice';
 
-export const ItemContact = ({contact, index, id, activeId, actualScroll}) => {
+export const ItemContact = ({contact, index, id, activeId}) => {
     const extraReservedImg = 'https://lh3.googleusercontent.com/pw/ABLVV857Vcs93eVOrm0Pm8WnNvcJSKLX3arSslyCmWpj-7cuG6ywCsjBpMiPRikFXgiC2xK8v2En5xPEynswskO4l7gjBpdWNWzhFRyOj8BJ3orxfjDDlbSF1EOr7mROLVTTOvdNiJhvM432128-GmRqOrEKcQ=w1500-h1000-s-no-gm?authuser=0';
 
     const dispatch = useDispatch();
@@ -35,7 +35,9 @@ export const ItemContact = ({contact, index, id, activeId, actualScroll}) => {
         const idContact = contact.id;
         dispatch(deleteContact(idContact));
         dispatch(deleteNumb());
-        dispatch(setScrollLeftLists(actualScroll));
+        const contactsList = document.querySelector('.listContactsForGap');
+        const scrollUl = contactsList.scrollLeft;
+        dispatch(setScrollLeftLists(scrollUl));
         };
 
     const [reservedImg, setReservedImg] = useState(extraReservedImg);
@@ -93,6 +95,12 @@ export const ItemContact = ({contact, index, id, activeId, actualScroll}) => {
         }
     }, [activeId, id, divItemContact, firstDivItemContact, buttonCh, buttonDel]);
 
+    const forClickUpdBut = () => {
+        setTimeout(() => {
+            setActiveChenging(true)
+        }, 400);
+    };
+
     return(
         <div ref={firstDivItemContactRef} className={[css.firstDivItemContact, 'firstDivItemContact'].join(' ')}
         style={{
@@ -106,7 +114,7 @@ export const ItemContact = ({contact, index, id, activeId, actualScroll}) => {
                     <button ref={buttonDelRef} id={contact.id} className={css.buttonDelete} type='button' onClick={updateStateForDelete}>
                         Delete
                     </button>
-                    <button ref={buttonChRef} type='button' className={css.changeCBut} onClick = {() => setActiveChenging(true)}>
+                    <button ref={buttonChRef} type='button' className={css.changeCBut} onClick = {forClickUpdBut}>
                         Change contact
                     </button>
                     {activeChanging && 
@@ -115,7 +123,6 @@ export const ItemContact = ({contact, index, id, activeId, actualScroll}) => {
                     name = {contact.name}
                     number = {contact.number}
                     id = {contact.id}
-                    actualScroll = {actualScroll}
                     />}
                 </div>
         </div>

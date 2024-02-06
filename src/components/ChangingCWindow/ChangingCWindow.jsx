@@ -2,8 +2,9 @@ import css from './ChangingCWindow.module.css';
 import { useDispatch } from 'react-redux';
 import { patchContact } from '../../redux/opertions';
 import { setScrollLeftLists } from '../../redux/contactsSlice';
+import { useEffect } from 'react';
 
-export const ChangingCWindow = ({closeChangingCWindow, name, number, id, actualScroll}) => {
+export const ChangingCWindow = ({closeChangingCWindow, name, number, id }) => {
     const dispatch = useDispatch();
 
     const updateStateForPatch = (evt) => {
@@ -16,10 +17,21 @@ export const ChangingCWindow = ({closeChangingCWindow, name, number, id, actualS
             name: newName,
             number: newNumb
         }
+        if(name !== newName || number !== newNumb){
         dispatch(patchContact(dataForPatch));
         evt.currentTarget.reset();
-        dispatch(setScrollLeftLists(actualScroll));
+        const contactsList = document.querySelector('.listContactsForGap');
+        const scrollUl = contactsList.scrollLeft;
+        dispatch(setScrollLeftLists(scrollUl));
+        } else {
+            closeChangingCWindow();
+        }
         };
+
+        useEffect(() => {
+            
+        }, []);
+
     return(
             <form className={css.formChangingCWindow} onSubmit={updateStateForPatch}>
                 <label className={css.labelChangingCWindow}>

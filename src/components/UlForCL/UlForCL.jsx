@@ -12,7 +12,6 @@ export const UlForCL = () => {
     const scrollLeftLists = useSelector(selectScrollLeftLists);
 
     const [activeId, setActiveId] = useState(null);
-    const [actualScroll, setActualScroll] = useState(0);
     const [listContHasEL, setListContHasEL] = useState(false);
 
     const listContacts = useRef(null);
@@ -21,7 +20,7 @@ export const UlForCL = () => {
     useEffect(() => {
         if(scrollLeftLists > 0){
             if(listContacts.current){
-                listContacts.current.scrollLeft = scrollLeftLists + 50;
+                listContacts.current.scrollLeft = scrollLeftLists;
                 dispatch(setScrollLeftLists(0));
             }
         }
@@ -46,7 +45,6 @@ export const UlForCL = () => {
         listContactsForGap.style.gap = screenWidth/(coef * 10) + 'px';
 
         const forScroll = () => {
-            setActualScroll(listContacts.current.scrollLeft);
             itemsContact.forEach(item => readRectItem(item));
         };
 
@@ -196,7 +194,6 @@ export const UlForCL = () => {
                         index={contacts.indexOf(contact)}
                         id={contact.id}
                         activeId={activeId}
-                        actualScroll={actualScroll}
                     />
                     </li>
                 )})
