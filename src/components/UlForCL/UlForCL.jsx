@@ -24,7 +24,7 @@ export const UlForCL = () => {
                 dispatch(setScrollLeftLists(0));
             }
         }
-    }, [scrollLeftLists]);
+    }, [scrollLeftLists, dispatch]);
 
     if(filter.length > 0) {
         contacts = contacts.filter((contact) => contact.name.toLowerCase().includes(filter.toLowerCase()))
