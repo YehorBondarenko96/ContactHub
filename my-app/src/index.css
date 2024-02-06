@@ -1,17 +1,3 @@
-@import-normalize; /* bring in normalize.css styles */
-
-html, body, #root {
-  min-height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-@media (min-height: 465px){
-  html, body, #root{
-    height: 100%;
-  }
-}
-
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
