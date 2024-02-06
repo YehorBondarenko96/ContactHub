@@ -10,7 +10,9 @@ const Home = () => {
         <div className={css.greetingHome}>
             <h1 className={css.hlHome}>ContactHub</h1>
             <svg className={css.logoHome}>
-            <use href="../contacts-svgrepo-com.svg#ContactsBook"></use>
+            <use 
+            // href="../contacts-svgrepo-com.svg#ContactsBook"
+            ></use>
             </svg>
         <h2 className={css.hllGreetingHome}>Welcome to </h2>
         <span className={css.logoNameGreetingHome}>
