@@ -20,7 +20,9 @@ export const UlForCL = () => {
     useEffect(() => {
         if(scrollLeftLists > 0){
             if(listContacts.current){
-                listContacts.current.scrollLeft = scrollLeftLists;
+                setTimeout(() => {
+                    listContacts.current.scrollLeft = scrollLeftLists;
+                }, 100);
                 dispatch(setScrollLeftLists(0));
             }
         }
