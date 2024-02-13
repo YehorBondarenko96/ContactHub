@@ -196,3 +196,34 @@
         font-size: 16px;
     }
 }
+
+
+
+@media (max-width: 450px){
+    .firstDivContactFormActive{
+        width: 300px;
+        height: 180px;
+        border-radius: 12px;
+    }
+
+    .firstDivContactFormActive .labelContactForm{
+        gap: 6px;
+    }
+
+    .firstDivContactFormActive .inputContactForm{
+        width: 180px;
+        height: 24px;
+        border-radius: 6px;
+        font-size: 12px;
+    }
+
+    .firstDivContactFormActive .buttonContactForm{
+        width: 54px;
+        height: 13px;
+        font-size: 7px;
+    }
+
+    .firstDivContactFormActive .nameInputContactForm{
+        font-size: 12px;
+    }
+}
