@@ -166,3 +166,33 @@
 .firstDivContactFormActive .nameInputContactForm{
     font-size: 20px;
 }
+
+
+@media (max-width: 600px){
+    .firstDivContactFormActive{
+        width: 400px;
+        height: 240px;
+        border-radius: 16px;
+    }
+
+    .firstDivContactFormActive .labelContactForm{
+        gap: 8px;
+    }
+
+    .firstDivContactFormActive .inputContactForm{
+        width: 240px;
+        height: 32px;
+        border-radius: 8px;
+        font-size: 15px;
+    }
+
+    .firstDivContactFormActive .buttonContactForm{
+        width: 72px;
+        height: 17px;
+        font-size: 11px;
+    }
+
+    .firstDivContactFormActive .nameInputContactForm{
+        font-size: 16px;
+    }
+}

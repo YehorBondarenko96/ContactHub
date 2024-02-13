@@ -2,7 +2,6 @@ import { addContact } from '../../redux/opertions';
 import css from './ContactForm.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectContacts } from '../../redux/selectors';
-// import { click } from '@testing-library/user-event/dist/click';
 
 export const ContactForm = () => {
     const dispatch = useDispatch();
