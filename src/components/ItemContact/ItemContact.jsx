@@ -73,6 +73,7 @@ export const ItemContact = ({contact, index, id, activeId}) => {
             setActiveChenging(false);
             firstDivItemContact.style.borderRadius = screenWidth/(coef * 22) + 'px';
             divItemContact.style.borderRadius = screenWidth/(coef * 22) + 'px';
+            divItemContact.style.textShadow = screenWidth/(coef * 250) + 'px ' + screenWidth/(coef * 250) + 'px ' + screenWidth/(coef * 100) + 'px black';
             buttonCh.style.top = screenWidth/(coef * 22) + 'px';
             buttonCh.style.left = screenWidth/(coef * 22) + 'px';
             buttonDel.style.top = screenWidth/(coef * 22) + 'px';
@@ -84,6 +85,7 @@ export const ItemContact = ({contact, index, id, activeId}) => {
         } else if(id === activeId && firstDivItemContact && divItemContact && buttonCh && buttonDel){
             firstDivItemContact.style.borderRadius = screenWidth/(coef * 22) * 1.4 + 'px';
             divItemContact.style.borderRadius = screenWidth/(coef * 22) * 1.4 + 'px';
+            divItemContact.style.textShadow = screenWidth/(coef * 250) + 'px' + screenWidth/(coef * 250) + 'px' + screenWidth/(coef * 100) + 'px black';
             buttonCh.style.top = screenWidth/(coef * 22) * 1.4 + 'px';
             buttonCh.style.left = screenWidth/(coef * 22) * 1.4 + 'px';
             buttonDel.style.top = screenWidth/(coef * 22) * 1.4 + 'px';
