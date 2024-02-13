@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/ContactHub/static/css/main.0982c62b.css",
-    "main.js": "/ContactHub/static/js/main.66353f1b.js",
+    "main.js": "/ContactHub/static/js/main.41fb9293.js",
     "static/css/433.61e39b1a.chunk.css": "/ContactHub/static/css/433.61e39b1a.chunk.css",
     "static/js/433.c6bcf8bf.chunk.js": "/ContactHub/static/js/433.c6bcf8bf.chunk.js",
     "static/css/160.98b1393e.chunk.css": "/ContactHub/static/css/160.98b1393e.chunk.css",
     "static/js/160.d62a435b.chunk.js": "/ContactHub/static/js/160.d62a435b.chunk.js",
-    "static/css/105.39f629b5.chunk.css": "/ContactHub/static/css/105.39f629b5.chunk.css",
-    "static/js/105.bd7ba26a.chunk.js": "/ContactHub/static/js/105.bd7ba26a.chunk.js",
+    "static/css/105.7ce63fdb.chunk.css": "/ContactHub/static/css/105.7ce63fdb.chunk.css",
+    "static/js/105.b63c7e23.chunk.js": "/ContactHub/static/js/105.b63c7e23.chunk.js",
     "static/js/979.dbc0a6de.chunk.js": "/ContactHub/static/js/979.dbc0a6de.chunk.js",
     "static/js/756.5b8f29e4.chunk.js": "/ContactHub/static/js/756.5b8f29e4.chunk.js",
     "static/css/962.00c1dfce.chunk.css": "/ContactHub/static/css/962.00c1dfce.chunk.css",
@@ -21,13 +21,13 @@
     "static/media/home-4-svgrepo-com.svg": "/ContactHub/static/media/home-4-svgrepo-com.e65d8a02f5037db1dc5b.svg",
     "static/media/delete-svgrepo-com.svg": "/ContactHub/static/media/delete-svgrepo-com.e524fd8417c9a9bd68d5.svg",
     "main.0982c62b.css.map": "/ContactHub/static/css/main.0982c62b.css.map",
-    "main.66353f1b.js.map": "/ContactHub/static/js/main.66353f1b.js.map",
+    "main.41fb9293.js.map": "/ContactHub/static/js/main.41fb9293.js.map",
     "433.61e39b1a.chunk.css.map": "/ContactHub/static/css/433.61e39b1a.chunk.css.map",
     "433.c6bcf8bf.chunk.js.map": "/ContactHub/static/js/433.c6bcf8bf.chunk.js.map",
     "160.98b1393e.chunk.css.map": "/ContactHub/static/css/160.98b1393e.chunk.css.map",
     "160.d62a435b.chunk.js.map": "/ContactHub/static/js/160.d62a435b.chunk.js.map",
-    "105.39f629b5.chunk.css.map": "/ContactHub/static/css/105.39f629b5.chunk.css.map",
-    "105.bd7ba26a.chunk.js.map": "/ContactHub/static/js/105.bd7ba26a.chunk.js.map",
+    "105.7ce63fdb.chunk.css.map": "/ContactHub/static/css/105.7ce63fdb.chunk.css.map",
+    "105.b63c7e23.chunk.js.map": "/ContactHub/static/js/105.b63c7e23.chunk.js.map",
     "979.dbc0a6de.chunk.js.map": "/ContactHub/static/js/979.dbc0a6de.chunk.js.map",
     "756.5b8f29e4.chunk.js.map": "/ContactHub/static/js/756.5b8f29e4.chunk.js.map",
     "962.00c1dfce.chunk.css.map": "/ContactHub/static/css/962.00c1dfce.chunk.css.map",
@@ -38,6 +38,6 @@
   },
   "entrypoints": [
     "static/css/main.0982c62b.css",
-    "static/js/main.66353f1b.js"
+    "static/js/main.41fb9293.js"
   ]
 }
