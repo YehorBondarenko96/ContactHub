@@ -53,11 +53,18 @@ export const UlForCL = () => {
                     const headerHeight = header.getBoundingClientRect().height;
                     const mainHeight = main.getBoundingClientRect().height;
                     const pageHeight = headerHeight + mainHeight;
-                    if(realScreenHeight < pageHeight){
-                        const body = document.querySelector('body');
-                    body.style.height = 'auto';
-                    const root = document.querySelector('#root');
-                    root.style.height = 'auto';
+                    const body = document.querySelector('body');
+                        body.style.height = '100%';
+                        const root = document.querySelector('#root');
+                        root.style.height = '100%';
+                        const html = document.querySelector('html');
+                        html.style.height = '100%';
+                    if(realScreenHeight < pageHeight && contacts.length > 0){
+                        console.log('contacts.length: ', contacts.length);
+
+                        body.style.height = 'auto';
+                        root.style.height = 'auto';
+                        html.style.height = 'auto';
                     }
         };
 
