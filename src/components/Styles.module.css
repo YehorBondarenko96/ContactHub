@@ -124,7 +124,7 @@
 }
 
 
-
+/* 
 @media (min-height: 365px) and
         (max-height: 465px)
         {
@@ -136,9 +136,15 @@
 
 
 @media (max-height: 365px) and
-        (max-width: 601px)
-        {
+        (max-width: 601px){
             .allDivContactList{
                 margin-bottom: 150px;
             }
-        }
+}
+
+@media (min-height: 403px) and
+        (max-height: 465px){
+            .allDivContactList{
+                margin-bottom: 250px;
+            }
+} */

@@ -46,6 +46,23 @@ export const UlForCL = () => {
         });
         listContactsForGap.style.gap = screenWidth/(coef * 10) + 'px';
 
+        const forBackgroundAllPage = () => {
+            const realScreenHeight = window.innerHeight;
+                    const header = document.querySelector('header');
+                    const main = document.querySelector('main');
+                    const headerHeight = header.getBoundingClientRect().height;
+                    const mainHeight = main.getBoundingClientRect().height;
+                    const pageHeight = headerHeight + mainHeight;
+                    if(realScreenHeight < pageHeight){
+                        const body = document.querySelector('body');
+                    body.style.height = 'auto';
+                    const root = document.querySelector('#root');
+                    root.style.height = 'auto';
+                    }
+        };
+
+        forBackgroundAllPage();
+
         const forScroll = () => {
             itemsContact.forEach(item => readRectItem(item));
         };
@@ -75,6 +92,8 @@ export const UlForCL = () => {
                     if(conditionForAutoSc !== 0){
                         listContacts.current.scrollLeft = scrollLForList + conditionForAutoSc;
                     };
+
+                    forBackgroundAllPage();
 
                     listContacts.current.removeEventListener('scroll', forScroll);
                     listContacts.current.removeEventListener('scroll', forScroll);
