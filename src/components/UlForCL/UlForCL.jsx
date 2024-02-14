@@ -60,8 +60,6 @@ export const UlForCL = () => {
                         const html = document.querySelector('html');
                         html.style.height = '100%';
                     if(realScreenHeight < pageHeight && contacts.length > 0){
-                        console.log('contacts.length: ', contacts.length);
-
                         body.style.height = 'auto';
                         root.style.height = 'auto';
                         html.style.height = 'auto';
