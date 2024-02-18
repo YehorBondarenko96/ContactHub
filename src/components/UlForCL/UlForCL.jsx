@@ -35,28 +35,28 @@ export const UlForCL = () => {
         contacts = contacts.filter((contact) => contact.name.toLowerCase().includes(filter.toLowerCase()))
     };
 
-    useEffect(() => {
-        const forBackgroundAllPage = () => {
-            const realScreenHeight = window.innerHeight;
-                    const header = document.querySelector('header');
-                    const main = document.querySelector('main');
-                    const headerHeight = header.getBoundingClientRect().height;
-                    const mainHeight = main.getBoundingClientRect().height;
-                    const pageHeight = headerHeight + mainHeight;
-                    const body = document.querySelector('body');
-                        body.style.height = '100%';
-                        const root = document.querySelector('#root');
-                        root.style.height = '100%';
-                        const html = document.querySelector('html');
-                        html.style.height = '100%';
-                    if(realScreenHeight < pageHeight){
-                        body.style.height = 'auto';
-                        root.style.height = 'auto';
-                        html.style.height = 'auto';
-                    }
-        };
-        forBackgroundAllPage()
-    });
+    // useEffect(() => {
+    //     const forBackgroundAllPage = () => {
+    //         const realScreenHeight = window.innerHeight;
+    //                 const header = document.querySelector('header');
+    //                 const main = document.querySelector('main');
+    //                 const headerHeight = header.getBoundingClientRect().height;
+    //                 const mainHeight = main.getBoundingClientRect().height;
+    //                 const pageHeight = headerHeight + mainHeight;
+    //                 const body = document.querySelector('body');
+    //                     body.style.height = '100%';
+    //                     const root = document.querySelector('#root');
+    //                     root.style.height = '100%';
+    //                     const html = document.querySelector('html');
+    //                     html.style.height = '100%';
+    //                 if(realScreenHeight < pageHeight){
+    //                     body.style.height = 'auto';
+    //                     root.style.height = 'auto';
+    //                     html.style.height = 'auto';
+    //                 }
+    //     };
+    //     forBackgroundAllPage()
+    // });
 
     useEffect(() => {
         const itemsContact = document.querySelectorAll('.itemContact');
