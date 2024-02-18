@@ -24,12 +24,10 @@ export const SharedLayout = () => {
     window.removeEventListener('orientationchange', forOrientation);
 
     useEffect(() => {
-        // console.log('Shared')
         window.addEventListener('orientationchange', forOrientation);
     });
 
     useEffect(() => {
-        console.log('Shared');
         const forBackgroundAllPage = () => {
             const realScreenHeight = window.innerHeight;
                     const header = document.querySelector('header');

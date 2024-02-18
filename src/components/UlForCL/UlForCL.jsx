@@ -36,6 +36,29 @@ export const UlForCL = () => {
     };
 
     useEffect(() => {
+        const forBackgroundAllPage = () => {
+            const realScreenHeight = window.innerHeight;
+                    const header = document.querySelector('header');
+                    const main = document.querySelector('main');
+                    const headerHeight = header.getBoundingClientRect().height;
+                    const mainHeight = main.getBoundingClientRect().height;
+                    const pageHeight = headerHeight + mainHeight;
+                    const body = document.querySelector('body');
+                        body.style.height = '100%';
+                        const root = document.querySelector('#root');
+                        root.style.height = '100%';
+                        const html = document.querySelector('html');
+                        html.style.height = '100%';
+                    if(realScreenHeight < pageHeight){
+                        body.style.height = 'auto';
+                        root.style.height = 'auto';
+                        html.style.height = 'auto';
+                    }
+        };
+        forBackgroundAllPage()
+    });
+
+    useEffect(() => {
         const itemsContact = document.querySelectorAll('.itemContact');
         const listContactsForGap = document.querySelector('.listContactsForGap');
         const coef = 2;
@@ -64,7 +87,6 @@ export const UlForCL = () => {
             realScreenWidth = window.innerWidth;
             screenWidth = realScreenWidth <= 1000 ? realScreenWidth : 1000;
             if(screenWidth){
-                console.log('screenWidth: ', screenWidth);
                 itemsContact.forEach(i => {
                     i.style.minWidth = screenWidth/coef + 'px';
                     i.style.height = screenWidth/(coef * 1.667) + 'px';
