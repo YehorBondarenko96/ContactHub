@@ -210,31 +210,37 @@ export const UlForCL = () => {
     }
     }, [contacts, listContHasEL, listContactsRef, screenOrient]);
 
-    const [headerHeight, setHeaderHeight] = useState(null);
-    const [mainHeight, setMainHeight] = useState(null);
+    // const [headerHeight, setHeaderHeight] = useState(null);
+    // const [mainHeight, setMainHeight] = useState(null);
 
-    const header = document.querySelector('header');
-    const main = document.querySelector('main');
+    // const header = document.querySelector('header');
+    // const main = document.querySelector('.divForAllMain');
     
-    useEffect(() => {
-        if(header && main){
-            setHeaderHeight(header.getBoundingClientRect().height);
-            setMainHeight(main.getBoundingClientRect().height);
-        };
-    }, [header, main]);
+    // useEffect(() => {
+    //     if(header && main){
+    //     //     const body = document.querySelector('body');
+    //     //     const html = document.querySelector('html');
+    //     //     html.style.display = 'block';
+    //     //     body.style.display = 'block';
+    //         setHeaderHeight(header.getBoundingClientRect().height);
+    //         setMainHeight(main.getBoundingClientRect().height);
+    //         // html.style.display = 'flex';
+    //         // body.style.display = 'flex';
+    //     };
+    // }, [header, main]);
     
                 
 
     useEffect(() => {
-        if(headerHeight && mainHeight){
+        // if(headerHeight && mainHeight){
             const realScreenHeight = window.innerHeight;
-            // const header = document.querySelector('header');
-            //     const main = document.querySelector('main');
-            //     const headerHeight = header.getBoundingClientRect().height;
-            //     const mainHeight = main.getBoundingClientRect().height;
+            const header = document.querySelector('header');
+                const main = document.querySelector('.divForAllMain');
+                const headerHeight = header.getBoundingClientRect().height;
+                const mainHeight = main.getBoundingClientRect().height;
                 let pageHeight = headerHeight + mainHeight + 15;
-                console.log('pageHeight: ', pageHeight);
-                console.log('pageHeight: ', pageHeight - 15);
+                // console.log('pageHeight: ', pageHeight);
+                // console.log('pageHeight: ', pageHeight - 15);
                 const body = document.querySelector('body');
                     body.style.height = '100%';
                     const root = document.querySelector('#root');
@@ -250,8 +256,8 @@ export const UlForCL = () => {
     return () => {
         pageHeight = null;
     }
-        }
-}, [contacts, headerHeight, mainHeight]);
+        // }
+}, [contacts]);
 
     return(
         <ul ref={listContacts} className={[css.listContacts, 'listContactsForGap'].join(' ')}>

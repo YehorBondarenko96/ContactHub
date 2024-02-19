@@ -57,9 +57,11 @@ export const SharedLayout = () => {
                 {isLoggedIn && <UserMenu/>}
             </header>
             <main>
+                <div className={[css.divForAllMain, 'divForAllMain'].join(' ')}>
                 <Suspense fallback={null}>
                     <Outlet />
                 </Suspense>
+                </div>
             </main>
         </>
     )

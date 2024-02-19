@@ -4,6 +4,11 @@ main{
     flex-direction: column;
 }
 
+.divForAllMain{
+    display: flex;
+    flex-direction: column;
+}
+
 .headerSharedLayout{
     padding: 10px 20px;
     border-bottom: #fff 1px solid;
