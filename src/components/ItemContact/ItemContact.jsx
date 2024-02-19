@@ -71,7 +71,6 @@ export const ItemContact = ({contact, index, id, activeId}) => {
 
     useEffect(() => {
         const coef = 2;
-        // const realScreenWidth = window.innerWidth;
         const screenWidth = screenOrient <= 1000 ? screenOrient : 1000;
         if(id !== activeId && firstDivItemContact && divItemContact && buttonCh && buttonDel){
             setActiveChenging(false);
