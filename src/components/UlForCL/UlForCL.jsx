@@ -40,11 +40,13 @@ export const UlForCL = () => {
     useEffect(() => {
         const forBackgroundAllPage = () => {
             const realScreenHeight = window.innerHeight;
+            console.log('realScreenHeight: ', realScreenHeight);
                     const header = document.querySelector('header');
                     const main = document.querySelector('main');
                     const headerHeight = header.getBoundingClientRect().height;
                     const mainHeight = main.getBoundingClientRect().height;
-                    const pageHeight = headerHeight + mainHeight;
+                    const pageHeight = headerHeight + mainHeight + 15;
+                    console.log('pageHeight: ', pageHeight);
                     const body = document.querySelector('body');
                         body.style.height = '100%';
                         const root = document.querySelector('#root');
