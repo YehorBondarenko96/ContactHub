@@ -43,26 +43,6 @@ export const ContactList = () => {
         if (numbsForImg.length < backgrounds.length){
         dispatch(createNumbs(makeMassifNumbs()));
         };
-
-        // const realScreenHeight = window.innerHeight;
-        // console.log('realScreenHeight: ', realScreenHeight);
-        // if(error){
-        //     const allDivContactList = document.querySelector('.allDivContactList');
-        //     const realScreenWidth = window.innerWidth;
-        //     const realScreenHeight = window.innerHeight;
-        //     if(allDivContactList){
-        //         if((realScreenHeight > 365 && realScreenHeight < 465) || 
-        //             (realScreenHeight < 365 && realScreenWidth < 601)){
-        //                 allDivContactList.style.marginBottom = '150px';
-        //             } else if(realScreenHeight > 403 && realScreenHeight < 465){
-        //                 allDivContactList.style.marginBottom = '250px';
-        //             }
-        //     }
-        // } else{
-        //     const root = document.querySelector('#root');
-        //     const rootHeight = root.getBoundingClientRect().height;
-        //     console.log('rootHeight: ', rootHeight);
-        // };
     });
 
     useEffect(() => {
