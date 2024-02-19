@@ -9,7 +9,8 @@ import { selectScreenOrient } from "../../redux/selectors";
 
 export const UlForCL = () => {
     const dispatch = useDispatch();
-    const [contacts, setContacts] = useState(useSelector(selectContacts));
+    const allContacts = useSelector(selectContacts);
+    const [contacts, setContacts] = useState(allContacts);
     const filter = useSelector(selectFilter);
     const scrollLeftLists = useSelector(selectScrollLeftLists);
     const screenOrient = useSelector(selectScreenOrient);
@@ -32,10 +33,13 @@ export const UlForCL = () => {
     }, [scrollLeftLists, dispatch]);
 
     useEffect(() => {
+        console.log(contacts);
         if(filter.length > 0) {
-            setContacts(prevContacts => prevContacts.filter((contact) => contact.name.toLowerCase().includes(filter.toLowerCase())))
+            setContacts(allContacts.filter((contact) => contact.name.toLowerCase().includes(filter.toLowerCase())));
+        } else{
+            setContacts(allContacts);
         };
-    }, [filter]);
+    }, [filter, allContacts]);
 
     useEffect(() => {
         let itemsContact = document.querySelectorAll('.itemContact');
