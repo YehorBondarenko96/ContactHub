@@ -33,7 +33,6 @@ export const UlForCL = () => {
     }, [scrollLeftLists, dispatch]);
 
     useEffect(() => {
-        console.log(contacts);
         if(filter.length > 0) {
             setContacts(allContacts.filter((contact) => contact.name.toLowerCase().includes(filter.toLowerCase())));
         } else{
