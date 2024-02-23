@@ -37,18 +37,9 @@ export const UlForCL = () => {
     }, [scrollLeftLists, dispatch]);
 
     useEffect(() => {
-        itemContactRef.current = [];
-        if(filter.length > 0) {
-            setContacts(allContacts.filter((contact) => contact.name.toLowerCase().includes(filter.toLowerCase())));
-        } else{
-            setContacts(allContacts);
-        };
-    }, [filter, allContacts]);
-
-    useEffect(() => {
         const listContactsRef = listContacts.current;
         const indHasClickEL = indHasClickELRef.current;
-        const itemsContact = itemContactRef.current.filter(li => li !== null);
+        const itemsContact = itemContactRef.current;
         const listContactsForGap = document.querySelector('.listContactsForGap');
         const coef = 2;
         let realScreenWidth = window.innerWidth;
@@ -225,6 +216,15 @@ export const UlForCL = () => {
         }
     }
     }, [contacts, screenOrient]);
+
+    useEffect(() => {
+        itemContactRef.current = [];
+        if(filter.length > 0) {
+            setContacts(allContacts.filter((contact) => contact.name.toLowerCase().includes(filter.toLowerCase())));
+        } else{
+            setContacts(allContacts);
+        };
+    }, [filter, allContacts]);
 
     useEffect(() => {
             const realScreenHeight = window.innerHeight;
