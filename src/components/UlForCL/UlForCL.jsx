@@ -252,7 +252,10 @@ export const UlForCL = () => {
 
     return(
         <ul ref={listContacts} className={[css.listContacts, 'listContactsForGap'].join(' ')}>
-            {contacts.length !== 0 &&
+            {(contacts.length === 0 && filter.length === 0) ? (
+                <h2>Right now you don't have any contacts.</h2>
+            ) : (
+            contacts.length !== 0 ? (
                 contacts.map((contact) => { 
                     return(
                         <li ref={e => { 
@@ -270,7 +273,12 @@ export const UlForCL = () => {
                         activeId={activeId}
                     />
                     </li>
-                )})
+                    )
+                })
+                    ) : (
+                            <h2>Not found any contacts that meet the search criteria.</h2>
+                    )
+            )
             }
         </ul>
     )
