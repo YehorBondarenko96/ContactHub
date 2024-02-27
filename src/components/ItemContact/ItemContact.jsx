@@ -34,6 +34,8 @@ export const ItemContact = ({contact, index, id, activeId}) => {
     const buttonCh = buttonChRef.current;
     const buttonDelRef = useRef(null);
     const buttonDel = buttonDelRef.current;
+    const buttonCallRef = useRef(null);
+    const buttonCall = buttonCallRef.current;
 
     const updateStateForDelete = () => {
         const idContact = contact.id;
@@ -72,7 +74,7 @@ export const ItemContact = ({contact, index, id, activeId}) => {
     useEffect(() => {
         const coef = 2;
         const screenWidth = screenOrient <= 1000 ? screenOrient : 1000;
-        if(id !== activeId && firstDivItemContact && divItemContact && buttonCh && buttonDel){
+        if(id !== activeId && firstDivItemContact && divItemContact && buttonCh && buttonDel && buttonCall){
             setActiveChenging(false);
             firstDivItemContact.style.borderRadius = screenWidth/(coef * 22) + 'px';
             divItemContact.style.borderRadius = screenWidth/(coef * 22) + 'px';
@@ -84,8 +86,12 @@ export const ItemContact = ({contact, index, id, activeId}) => {
             buttonDel.style.width = screenWidth/(coef * 13) + 'px';
             buttonDel.style.height = screenWidth/(coef * 13) + 'px';
             buttonCh.style.width = screenWidth/(coef * 13) + 'px';
-            buttonCh.style.height = screenWidth/(coef * 13) + 'px';
-        } else if(id === activeId && firstDivItemContact && divItemContact && buttonCh && buttonDel){
+            buttonCh.style.height = screenWidth / (coef * 13) + 'px';
+            buttonCall.style.bottom = screenWidth/(coef * 22) + 'px';
+            buttonCall.style.left = screenWidth/(coef * 22) + 'px';
+            buttonCall.style.width = screenWidth/(coef * 13) + 'px';
+            buttonCall.style.height = screenWidth/(coef * 13) + 'px';
+        } else if(id === activeId && firstDivItemContact && divItemContact && buttonCh && buttonDel && buttonCall){
             firstDivItemContact.style.borderRadius = screenWidth/(coef * 22) * 1.4 + 'px';
             divItemContact.style.borderRadius = screenWidth/(coef * 22) * 1.4 + 'px';
             divItemContact.style.textShadow = screenWidth/(coef * 250) + 'px' + screenWidth/(coef * 250) + 'px' + screenWidth/(coef * 100) + 'px black';
@@ -96,9 +102,13 @@ export const ItemContact = ({contact, index, id, activeId}) => {
             buttonDel.style.width = screenWidth/(coef * 13) * 1.4 + 'px';
             buttonDel.style.height = screenWidth/(coef * 13) * 1.4 + 'px';
             buttonCh.style.width = screenWidth/(coef * 13) * 1.4 + 'px';
-            buttonCh.style.height = screenWidth/(coef * 13) * 1.4 + 'px';
+            buttonCh.style.height = screenWidth / (coef * 13) * 1.4 + 'px';
+            buttonCall.style.bottom = screenWidth/(coef * 22) * 1.4 + 'px';
+            buttonCall.style.left = screenWidth/(coef * 22) * 1.4 + 'px';
+            buttonCall.style.width = screenWidth/(coef * 13) * 1.4 + 'px';
+            buttonCall.style.height = screenWidth/(coef * 13) * 1.4 + 'px';
         }
-    }, [activeId, id, divItemContact, firstDivItemContact, buttonCh, buttonDel, screenOrient]);
+    }, [activeId, id, divItemContact, firstDivItemContact, buttonCh, buttonDel, buttonCall, screenOrient]);
 
     const forClickUpdBut = () => {
         setTimeout(() => {
@@ -121,7 +131,12 @@ export const ItemContact = ({contact, index, id, activeId}) => {
                     </button>
                     <button ref={buttonChRef} type='button' className={css.changeCBut} onClick = {forClickUpdBut}>
                         Change contact
+                </button>
+                <a href={`tel:${contact.number}`}>
+                <button ref={buttonCallRef} type='button' className={css.callBut} >
+                        Call to contact
                     </button>
+                    </a>
                     {activeChanging && 
                     <ChangingCWindow 
                     closeChangingCWindow = {closeChangingCWindow} 

@@ -123,6 +123,35 @@
     border-color: #d3d3d3;
 }
 
+.callBut {
+    border: transparent 1px solid;
+    border-radius: 50%;
+    background: transparent;
+    color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./ItemContact/phone-svgrepo-com.svg#Call_botton');
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    cursor: pointer;
+    transition: border-color ease 0.5s, top 250ms cubic-bezier(0.25, 0.1, 0.25, 1),
+        right 250ms cubic-bezier(0.25, 0.1, 0.25, 1), width 250ms cubic-bezier(0.25, 0.1, 0.25, 1),
+        height 250ms cubic-bezier(0.25, 0.1, 0.25, 1), border-width 250ms cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.itemContactActive .callBut {
+    border-width: 2px;
+}
+
+
+
+.callBut:hover {
+    border-color: #d3d3d3;
+}
+
 
 /* 
 @media (min-height: 365px) and
