@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { searchForBackground } from "../redux/searchForStyles";
 import { selectBgGeneral } from "../redux/selectors";
 
-const Home = lazy(() => import('./Home/Home'))
+const Home = lazy(() => import('./Home/Home'));
 const RegisterForm = lazy(() => import("./RegisterForm/RegisterForm"));
 const PageUsers = lazy(() => import('./PageUsers/PageUsers'));
 const LoggedInOrNot = lazy(() => import('./LoggedInOrNot/LoggedInOrNot'));
